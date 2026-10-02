@@ -71,7 +71,24 @@ button{font:inherit;cursor:pointer;background:var(--navy);color:#fff;border:0;bo
   .stats div:first-child{border-left:0;padding-left:0}
   .about{grid-template-columns:1.3fr 1fr}
   .contact{grid-template-columns:repeat(3,1fr)}
-  section{margin-top:28px;padding-top:18px}
+  body{font-size:12.5px;line-height:1.45}
+  h1{font-size:68px;animation:none}
+  h2{font-size:32px}
+  .sub{font-size:15px;margin-top:8px}
+  .ids{font-size:12px}
+  .photo{width:100px;height:125px}
+  .stats{margin-top:16px}
+  .stats div{padding:8px 10px}
+  .stats b{font-size:22px}
+  p{margin-top:7px;max-width:none}
+  .tag{margin-bottom:6px}
+  section{margin-top:18px;padding-top:12px}
+  section.career{break-before:page;margin-top:0;border-top:0;padding-top:0}
+  .about{gap:22px}
+  .card{padding:14px}
+  .card h3{font-size:24px;margin-bottom:4px}
+  .card dl div{padding:5px 0;font-size:12px}
+  .timeline li{padding-bottom:16px}
 }
 @media(prefers-reduced-motion:no-preference){h1{animation:in .6s ease-out both}@keyframes in{from{opacity:0;transform:translateY(8px)}}}
 </style>
@@ -129,7 +146,7 @@ button{font:inherit;cursor:pointer;background:var(--navy);color:#fff;border:0;bo
     </div>
   </section>
 
-  <section style="break-inside:auto">
+  <section class="career" style="break-inside:auto">
     <span class="tag">Career</span>
     <h2>Playing experience</h2>
     <ol class="timeline" id="timeline"></ol>
