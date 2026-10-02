@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hariharan Karthik - Football CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--navy:#0f2a43;--gold:#3fb8af;--gold-d:#1f8f87;--ink:#1a2233;--mute:#5d677a;--line:#d5e0e3;--card:#f1f6f7;--bg:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{max-width:900px;margin:0 auto;padding:40px 24px 56px}
+h1,h2,h3,.big{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.01em;line-height:.95}
+header{display:flex;gap:24px;justify-content:space-between;align-items:flex-start}
+h1{font-size:clamp(56px,13vw,112px);color:var(--navy)}
+h1 span{display:block;color:var(--gold-d)}
+.sub{margin-top:14px;font-size:18px;color:var(--ink)}
+.ids{margin-top:6px;font-size:14px;color:var(--mute)}
+.photo{flex:0 0 auto;width:120px;height:150px;border-radius:10px;border:2px solid var(--navy);background:var(--card);overflow:hidden;cursor:pointer;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;font-size:12px;color:var(--mute);padding:8px}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.stats{display:grid;grid-template-columns:repeat(6,1fr);margin-top:32px;border-top:3px solid var(--navy);border-bottom:1px solid var(--line)}
+.stats div{padding:14px 12px;border-left:1px solid var(--line)}
+.stats div:first-child{border-left:0;padding-left:0}
+.stats small{display:block;font-size:12px;color:var(--mute)}
+.stats b{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;font-size:26px;color:var(--navy);letter-spacing:.01em}
+section{margin-top:44px;padding-top:28px;border-top:1px solid var(--line);break-inside:avoid}
+.tag{display:inline-block;background:var(--gold);color:var(--navy);font-weight:600;font-size:13px;padding:2px 10px;border-radius:99px;margin-bottom:10px}
+h2{font-size:clamp(34px,6vw,48px);color:var(--navy)}
+h2 i{font-style:normal;background:linear-gradient(transparent 62%,var(--gold) 62%)}
+p{margin-top:12px;max-width:62ch}
+a{color:var(--navy);font-weight:600}
+.hl{background:rgba(63,184,175,.22);padding:0 4px;border-radius:3px;font-weight:600;color:var(--navy)}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:36px;align-items:start}
+.card{background:var(--card);border-top:5px solid var(--gold);border-radius:8px;padding:22px}
+.card h3{font-size:28px;color:var(--navy);margin-bottom:8px}
+.card dl div{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
+.card dl div:last-child{border:0}
+.card dt{color:var(--mute)}
+.card dd{text-align:right;font-weight:500;word-break:break-word}
+.timeline{margin-top:20px;list-style:none;border-left:3px solid var(--navy);padding-left:24px}
+.timeline li{position:relative;padding-bottom:24px;break-inside:avoid}
+.timeline li::before{content:"";position:absolute;left:-33px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--gold);border:3px solid var(--navy)}
+.timeline .yr{font-family:"Bebas Neue",Impact,sans-serif;font-size:22px;color:var(--navy)}
+.timeline .lg{margin-left:8px;font-size:12px;font-weight:600;background:var(--navy);color:#fff;border-radius:4px;padding:2px 8px}
+.timeline .club{font-weight:600}
+.timeline p{margin-top:2px;font-size:14px;color:var(--mute)}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.contact div{background:var(--navy);color:#fff;border-radius:8px;padding:16px 18px;font-size:14px;word-break:break-word}
+.contact small{display:block;color:var(--gold);font-size:12px;margin-bottom:2px}
+.contact a{color:#fff;text-decoration:none}
+.cap{display:inline-block;margin-top:10px;background:var(--navy);color:#fff;font-weight:600;font-size:13px;padding:3px 12px;border-radius:99px;border-left:6px solid var(--gold)}
+.lg.c{background:var(--gold-d)}
+.hint{margin-top:28px;font-size:12px;color:var(--mute)}
+button{font:inherit;cursor:pointer;background:var(--navy);color:#fff;border:0;border-radius:6px;padding:8px 14px;margin-top:8px}
+@media(max-width:700px){
+  header{flex-direction:column-reverse}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stats div{border-left:0;padding-left:0;border-bottom:1px solid var(--line)}
+  .about,.contact{grid-template-columns:1fr}
+}
+@page{size:A4;margin:12mm}
+@media print{
+  .page{max-width:none;padding:0}
+  .hint,button{display:none}
+  .photo{border-width:1px}
+  header{flex-direction:row}
+  .stats{grid-template-columns:repeat(6,1fr)}
+  .stats div{border-left:1px solid var(--line);padding-left:12px}
+  .stats div:first-child{border-left:0;padding-left:0}
+  .about{grid-template-columns:1.3fr 1fr}
+  .contact{grid-template-columns:repeat(3,1fr)}
+  section{margin-top:28px;padding-top:18px}
+}
+@media(prefers-reduced-motion:no-preference){h1{animation:in .6s ease-out both}@keyframes in{from{opacity:0;transform:translateY(8px)}}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>Hariharan<span>Karthik</span></h1>
+      <p class="sub">Footballer: Right Back, Left Back and Defensive Midfielder</p>
+      <p class="ids">CRS ID: PL0000172268 | FIFA ID: 192WRA4 | Indian National | BDFA C Division</p>
+    </div>
+    <div class="photo" id="photo" tabindex="0" role="button" aria-label="Add your photo">
+      <span id="ph">Tap to add your photo</span>
+    </div>
+  </header>
+  <input type="file" id="file" accept="image/*" hidden>
+
+  <div class="stats">
+    <div><small>Position</small><b>RB / LB / DM</b></div>
+    <div><small>Strong foot</small><b>Right</b></div>
+    <div><small>Height</small><b>168 cm</b></div>
+    <div><small>Weight</small><b>65 kg</b></div>
+    <div><small>Date of birth</small><b>24 Aug 2004</b></div>
+    <div><small>Nationality</small><b>Indian</b></div>
+  </div>
+
+  <section>
+    <span class="tag">Highlights</span>
+    <h2>Watch me <i>play</i></h2>
+    <p>Highlights are available on request. <a href="mailto:hariharan.hps@gmail.com?subject=Match%20footage%20request">Contact me</a> for full match footage.</p>
+  </section>
+
+  <section>
+    <span class="tag">About</span>
+    <h2>Technical. Aware. <i>Always working.</i></h2>
+    <div class="about">
+      <div>
+        <p>I'm <b>Hariharan Karthik</b>, a young footballer from Bangalore. I play as a <span class="hl">Right Back</span> and can also cover <span class="hl">Left Back</span> and <span class="hl">Defensive Midfield</span>. From the <span class="hl">KSFA Youth Premier League U-17</span> with <span class="hl">BBFS</span> to senior football with <span class="hl">Snipers FC</span> through the <span class="hl">BDFA C, B and A Divisions</span>, including a <span class="hl">promotion-winning season</span> in the B Division, I've learned the game at every level. I'm now playing senior football with <span class="hl">Jai Bharath Nagar FC</span>.</p>
+        <p>I'm a <span class="hl">technical player</span> with real precision in my <span class="hl">passing and ball deliveries</span>. I bring <span class="hl">strong stamina and a high work rate</span>, and I use my head: I read the game, spot free space early and anticipate play, so I'm already moving before the ball arrives.</p>
+        <p>I'm also a <span class="hl">penalty taker</span>. I stay <span class="hl">calm and composed</span> under pressure and have a <span class="hl">very high conversion rate</span> from the spot. <span class="hl">Leadership</span> is another strength: I've <span class="hl">captained my team</span>, leading by example and taking responsibility on the pitch. I'm focused on steady growth and earning a place in a squad that wants to win.</p>
+      </div>
+      <div class="card">
+        <h3>Personal details</h3>
+        <dl>
+          <div><dt>Born</dt><dd>24 / 08 / 2004</dd></div>
+          <div><dt>Based in</dt><dd>Kaggadasapura, Bangalore</dd></div>
+          <div><dt>Nationality</dt><dd>Indian</dd></div>
+          <div><dt>Phone</dt><dd>+91 74839 26353</dd></div>
+          <div><dt>Email</dt><dd>hariharan.hps@gmail.com</dd></div>
+          <div><dt>CRS ID</dt><dd>PL0000172268</dd></div>
+          <div><dt>FIFA ID</dt><dd>192WRA4</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section style="break-inside:auto">
+    <span class="tag">Career</span>
+    <h2>Playing experience</h2>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section>
+    <span class="tag">Contact</span>
+    <h2>Looking to <i>recruit?</i></h2>
+    <div class="contact">
+      <div><small>Email</small><a href="mailto:hariharan.hps@gmail.com">hariharan.hps@gmail.com</a></div>
+      <div><small>Phone / WhatsApp</small><a href="https://wa.me/917483926353">+91 74839 26353</a></div>
+      <div><small>Based in</small>Kaggadasapura, Bangalore</div>
+    </div>
+  </section>
+
+  <p class="hint">To save as PDF: press Ctrl+P (Cmd+P on Mac), choose "Save as PDF", set paper size to A4, margins to Default, and turn on "Background graphics".
+    <br><button onclick="window.print()">Save as PDF</button></p>
+</div>
+
+<script>
+// Add a new season by adding one line at the top of this list.
+const career = [
+  {yr:"2025 - 2026", lg:"BDFA C Division", club:"Jai Bharath Nagar FC (JBNFC)",
+   cap:true, note:"Captaining a new club in senior BDFA football: leading from the front, staying match-sharp and driving the team towards the next promotion."},
+  {yr:"2024 - 2025", lg:"BDFA A Division", club:"Snipers FC",
+   note:"Stepped up to the BDFA A Division, Bangalore's second tier of club football, and gained top-level senior experience every week."},
+  {yr:"2023 - 2024", lg:"BDFA B Division", club:"Snipers FC",
+   note:"Started in a promotion-winning season that took Snipers FC up to the A Division."},
+  {yr:"2021 - 2022", lg:"BDFA C Division", club:"Snipers FC",
+   note:"Made the jump to senior football early, earning match minutes in the BDFA C Division while still playing youth football."},
+  {yr:"2021 - 2022", lg:"KSFA YPL U-17", club:"BBFS (Bhaichung Bhutia Football Schools)",
+   note:"Started for BBFS in state-level youth football and helped the team reach the quarter-finals."},
+  {yr:"2020 - 2021", lg:"KSFA YPL U-17", club:"BBFS (Bhaichung Bhutia Football Schools)",
+   note:"Started for BBFS in the Karnataka Youth Premier League, building my game at state level."}
+];
+document.getElementById("timeline").innerHTML = career.map(c =>
+  `<li><span class="yr">${c.yr}</span><span class="lg">${c.lg}</span>${c.cap?'<span class="lg c">Captain</span>':""}
+   <div class="club">${c.club}</div><p>${c.note}</p></li>`).join("");
+
+// Photo: click the box to choose an image (or put it in the same folder and set PHOTO_SRC).
+const PHOTO_SRC = "photo.jpeg"; // e.g. "photo.jpg"
+const box = document.getElementById("photo"), input = document.getElementById("file");
+function setPhoto(src){
+  const old = box.querySelector("img"); if(old) old.remove();
+  const im = new Image(); im.alt = "Hariharan Karthik"; im.src = src;
+  im.onload = () => { document.getElementById("ph").style.display = "none"; box.appendChild(im); };
+}
+if (PHOTO_SRC) setPhoto(PHOTO_SRC);
+box.addEventListener("click", () => input.click());
+box.addEventListener("keydown", e => { if(e.key==="Enter"||e.key===" "){ e.preventDefault(); input.click(); }});
+input.addEventListener("change", () => {
+  const f = input.files[0]; if(!f) return;
+  const r = new FileReader(); r.onload = () => setPhoto(r.result); r.readAsDataURL(f);
+});
+</script>
+</body>
+</html>
